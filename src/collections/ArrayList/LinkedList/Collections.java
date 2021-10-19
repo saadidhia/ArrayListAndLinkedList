@@ -1,10 +1,15 @@
 package collections.ArrayList.LinkedList;
-
+import java.util.stream.Collectors;
 import java.util.ArrayList;
+
+
+import api.stream.Person;
 
 public class Collections {
 
 	public static void main(String[] args) {
+		
+		System.out.println("----------------------ArrayList----------------------------------");
 		ArrayList<String> aList=new ArrayList<>();
 		ArrayList<String> emptyList=new ArrayList<>();
 		ArrayList<String> bList=new ArrayList<>();
@@ -47,6 +52,25 @@ public class Collections {
         for(int l=0;l<anotherList.size();l++) {
         	System.out.print(anotherList.get(l)+" ");
         }
+        
+        System.out.println("\n"+"\n"+"----------------------EndArrayList----------------------------------"+"\n"+"\n");
+        
+        ArrayList<Person> persons=new ArrayList<>();
+        Person person1=new Person("dhia",25,98);
+        Person person2=new Person("fedi",27,100);
+        Person person3=new Person("chedi",45,70);
+        Person person4=new Person("Ali",60,80.10);
+        Person person5=new Person("Dalila",50,80);
+        Person person6=new Person("Nada",28,70.5);
+        persons.add(person1);
+        persons.add(person2);
+        persons.add(person3);
+        persons.add(person4);
+        persons.add(person5);
+        persons.add(person6);
+        System.out.println(Person.ExistePlusAgeQue30(persons));
+        Person.PersonsAgeplus30(persons);
+        
         
         
         
