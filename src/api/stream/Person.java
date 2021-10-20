@@ -60,6 +60,26 @@ public class Person {
 		
 	}
 	
+	public static void PersonsAgeplus30WithoutTheFirst(ArrayList<Person> persons) {
+		
+		List<Person> personsAge30AnsWithoutFirst=persons.stream().filter(person->person.getAge()>=30).skip(1).collect(Collectors.toList());
+		personsAge30AnsWithoutFirst.forEach(person->System.out.println(person.getName()+" "+person.getAge()+" "+person.getWeight()));
+	}
+	
+	public static int getSomeAgeMoreThan30(ArrayList<Person> persons) {
+		 List<Integer> ages= persons.stream().filter(p->p.getAge()>=30).map(p->p.getAge()).collect(Collectors.toList());
+	       int sm=0;
+	       for (int z=0;z<ages.size();z++) {
+	    	   sm+=ages.get(z);
+	       }
+	       return sm;
+	}
+	
+	public static void SortByName(ArrayList<Person> persons) {
+		 persons.stream().map(p->p.getName()).sorted().collect(Collectors.toList()).forEach(name->System.out.println(name));;
+		
+	}
+	
 	
 	
 	
