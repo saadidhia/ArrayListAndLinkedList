@@ -1,7 +1,7 @@
 package collections.ArrayList.LinkedList;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
-
+import java.util.List;
 
 import api.stream.Person;
 
@@ -59,9 +59,9 @@ public class Collections {
         Person person1=new Person("dhia",25,98);
         Person person2=new Person("fedi",27,100);
         Person person3=new Person("chedi",45,70);
-        Person person4=new Person("Ali",60,80.10);
-        Person person5=new Person("Dalila",50,80);
-        Person person6=new Person("Nada",28,70.5);
+        Person person4=new Person("ali",60,80.10);
+        Person person5=new Person("dalila",50,80);
+        Person person6=new Person("nada",28,70.5);
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);
@@ -70,8 +70,15 @@ public class Collections {
         persons.add(person6);
         System.out.println(Person.ExistePlusAgeQue30(persons));
         Person.PersonsAgeplus30(persons);
-        
-        
+       System.out.println("----------------------Persons have age more than 30 except the first one on the list--------------------------------");
+        Person.PersonsAgeplus30WithoutTheFirst(persons);
+        System.out.println("----------------------get the Somme of ages for persons with age more than 30--------------------------------");
+      int sm=Person.getSomeAgeMoreThan30(persons);
+      System.out.println(sm);
+      System.out.println("----------------------Sort by Age of ArrayList persons--------------------------------");
+     Person.SortByName(persons);
+       
+        	
         
         
         
